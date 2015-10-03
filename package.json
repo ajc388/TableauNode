@@ -1,0 +1,22 @@
+{
+  "name": "tableau",
+  "version": "1.0.0",
+  "description": "Tutorial for interacting with tableau via stock market",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajc388/TableauNode.git"
+  },
+  "author": "ajc388",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ajc388/TableauNode/issues"
+  },
+  "homepage": "https://github.com/ajc388/TableauNode#readme",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}

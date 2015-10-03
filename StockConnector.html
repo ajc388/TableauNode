@@ -1,0 +1,29 @@
+<html>
+<meta http-equiv="Cache-Control" content="no-store" />
+<head>
+  <title>Stock Quote Connector-Tutorial</title>
+  <script src="https://online.tableau.com/javascripts/api/tableauwdc-1.1.0.js" type="text/javascript"></script>
+  <script type="text/javascript">
+  (function() {
+      var myConnector = tableau.makeConnector();
+
+      myConnector.getColumnHeaders = function() {
+          var fieldNames = [];
+          var fieldTypes = [];
+          tableau.headersCallback(fieldNames, fieldTypes);
+      }
+
+      myConnector.getTableData = function(lastRecordToken) {
+          var dataToReturn = [];
+          var lastRecordToken = 0;
+          var hasMoreData = false;
+          tableau.dataCallback(dataToReturn, lastRecordToken.toString(), hasMoreData);
+      }
+
+      tableau.registerConnector(myConnector);
+  })();
+  </script>
+</head>
+<body>
+</body>
+</html>
